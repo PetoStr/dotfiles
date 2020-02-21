@@ -13,7 +13,7 @@ Just my own collection of dotfiles.
 
 ## Installation
 ```
-$ chmod +x install.sh
-$ ./install.sh
+chmod +x install.sh
+./install.sh
 ```
 
