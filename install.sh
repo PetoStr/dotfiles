@@ -23,7 +23,7 @@ createdirs() {
 symlinkdotfiles () {
 	find . -type f -not -path "./.git/*" | while read -r file; do
 		case $file in
-			"./$(basename "$0")")
+			"./$(basename "$0")"|./*.md)
 				continue
 				;;
 			*)
