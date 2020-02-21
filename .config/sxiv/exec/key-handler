@@ -1,0 +1,16 @@
+#!/bin/sh
+
+while read file
+do
+        case "$1" in
+        "C-c")
+                echo -n "$file" | xclip -selection clipboard ;;
+        "C-w")
+		wal -l -i "$file" ;;
+        "C-e")
+		wal -i "$file" ;;
+	"C-d")
+		mv "$file" /tmp ;;
+        esac
+done
+

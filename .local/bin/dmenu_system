@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+chosen=$(printf "shutdown\nreboot\nsleep\nhibernate" | dmenu_wal)
+
+case "$chosen" in
+	"shutdown")
+		sudo shutdown -h now
+		;;
+	"reboot")
+		sudo reboot
+		;;
+	"sleep")
+		sudo zzz
+		;;
+	"hibernate")
+		sudo ZZZ
+		;;
+esac
+

@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+choice_all="all"
+choice_all_cb="all (clipboard)"
+choice_area="area"
+choice_area_cb="area (clipboard)"
+choice_focused="focused window"
+choice_focused_cb="focused window (clipboard)"
+
+choices="$choice_all\\n$choice_all_cb\\n$choice_area\\n$choice_area_cb\\n$choice_focused\\n$choice_focused_cb"
+
+xclip_cmd="xclip -selection clipboard -target image/png"
+
+filename () {
+	echo "$HOME/Pictures/prntscr/$(date '+%d-%m-%y_%H-%M-%s').png"
+}
+
+case "$(printf "$choices" | dmenu_wal -l 6 -i -p "Screenshot:")" in
+	$choice_all)
+		maim "$(filename)"
+		;;
+	$choice_all_cb)
+		maim | $xclip_cmd
+		;;
+	$choice_area)
+		maim -s "$(filename)"
+		;;
+	$choice_area_cb)
+		maim -s | $xclip_cmd
+		;;
+	$choice_focused)
+		maim -i "$(xdotool getactivewindow)" "$(filename)"
+		;;
+	$choice_focused_cb)
+		maim -i "$(xdotool getactivewindow)" | $xclip_cmd
+		;;
+esac
+
