@@ -17,7 +17,7 @@ createdirs() {
 	mkdir -vp "$HOME/.local/bin"
 	mkdir -vp "$HOME/.vim/file_templates"
 
-	mkdir -vp "$HOME/Pictures/prntsr"
+	mkdir -vp "$HOME/Pictures/prntscr"
 }
 
 symlinkdotfiles () {
