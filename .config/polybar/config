@@ -31,7 +31,7 @@ module-margin-right = 1
 
 font-0 = mono:pixelsize=9;1
 font-1 = Inconsolata Nerd Font:size=9;1
-font-2 = Noto Color Emoji:pixelsize=9;style=Regular;2
+font-2 = Noto Color Emoji:scale=9;style=Regular;2
 font-3 = Symbola:pixelsize=9;1
 
 modules-left = i3
