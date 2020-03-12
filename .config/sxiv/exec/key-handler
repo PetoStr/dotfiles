@@ -4,7 +4,7 @@ while read file
 do
         case "$1" in
         "C-c")
-                echo -n "$file" | xclip -selection clipboard ;;
+                xclip -selection clipboard -t image/png "$file" ;;
         "C-w")
 		wal -l -i "$file" ;;
         "C-e")
