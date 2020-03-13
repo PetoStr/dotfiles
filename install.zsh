@@ -23,12 +23,14 @@ $HOME/Pictures/prntscr"
 bckdir="$HOME/dotfiles-bck-$(date '+%d-%m-%y_%H-%M-%s')"
 
 createdirs () {
+	echo "Preparing directories."
 	for dir in "${(f)dirs}"; do
 		mkdir -vp "$dir"
 	done
 }
 
 symlinkdotfiles () {
+	echo "Linking dotfiles."
 	find . -type f -not -path "./.git/*" | while read -r file; do
 		case $file in
 			"./$scriptname"|./*.md)
@@ -37,6 +39,8 @@ symlinkdotfiles () {
 			*)
 				file="$(echo "$file" | cut -c3-)"
 				if [ -e "$HOME/$file" ]; then
+					echo
+					echo "$HOME/$file exists, making a backup"
 					mkdir -vp "$bckdir"
 					cp -r --parent "$HOME/$file" "$bckdir"
 				fi
