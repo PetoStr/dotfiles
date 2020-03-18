@@ -1,11 +1,11 @@
 [ -f ~/.config/aliasrc ] && source ~/.config/aliasrc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000000
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=$HISTSIZE
 setopt appendhistory
-setopt HIST_IGNORE_DUPS
+setopt hist_ignore_all_dups
 
 setopt completealiases
 zstyle ':completion:*' rehash true
