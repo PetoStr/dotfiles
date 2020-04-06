@@ -20,7 +20,7 @@ $HOME/.local/bin
 $HOME/.vim/file_templates
 $HOME/Pictures/prntscr"
 
-bckdir="$HOME/dotfiles-bck-$(date '+%d-%m-%y_%H-%M-%s')"
+bckdir="$HOME/dotfiles-bck-$(date '+%y-%m-%d_%H-%M-%s')"
 
 createdirs () {
 	echo "Preparing directories."
