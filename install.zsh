@@ -18,7 +18,8 @@ $HOME/.config/zsh
 $HOME/.config/sxiv/exec
 $HOME/.local/bin
 $HOME/.vim/file_templates
-$HOME/Pictures/prntscr"
+$HOME/Pictures/prntscr
+$HOME/.cache/zsh"
 
 bckdir="$HOME/dotfiles-bck-$(date '+%y-%m-%d_%H-%M-%S')"
 

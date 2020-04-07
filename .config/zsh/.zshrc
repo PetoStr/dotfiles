@@ -1,7 +1,7 @@
 [ -f ~/.config/aliasrc ] && source ~/.config/aliasrc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/zsh/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 setopt appendhistory
