@@ -154,9 +154,9 @@ bindsym Shift+XF86MonBrightnessUp exec "light -A 5"
 bindsym Shift+XF86MonBrightnessDown exec "light -U 5"
 
 
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -1%"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +1%"
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 1
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 1
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
 bindsym XF86AudioMicMute exec --no-startup-id pulseaudio-ctl mute-input
 
 bindsym XF86Tools exec --no-startup-id synclient TouchpadOff=$(synclient -l | grep -i TouchpadOff | awk '{print !$3}')
