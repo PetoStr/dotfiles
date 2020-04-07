@@ -8,6 +8,7 @@ setopt appendhistory
 setopt hist_ignore_all_dups
 
 setopt completealiases
+setopt globdots
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu select
 
