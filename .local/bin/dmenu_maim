@@ -12,7 +12,7 @@ choices="$choice_all\\n$choice_all_cb\\n$choice_area\\n$choice_area_cb\\n$choice
 xclip_cmd="xclip -selection clipboard -target image/png"
 
 filename () {
-	echo "$HOME/Pictures/prntscr/$(date '+%y-%m-%d_%H-%M-%S').png"
+	echo "$HOME/pics/prntscr/$(date '+%y-%m-%d_%H-%M-%S').png"
 }
 
 case "$(printf "$choices" | dmenu_wal -l 6 -i -p "Screenshot:")" in
