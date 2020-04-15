@@ -29,7 +29,6 @@ set diffopt=filler,iwhite       " ignore all whitespace and sync
 set mouse=a
 set showcmd
 set number relativenumber
-set colorcolumn=80
 set ruler
 set noerrorbells
 set ls=2
@@ -57,6 +56,7 @@ autocmd FileType cpp nnoremap <Leader>i ggdG:r ~/.vim/file_templates/cf_template
 autocmd FileType c nnoremap <Leader>c :!gcc -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
 autocmd FileType cpp nnoremap <Leader>c :!g++ -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
 autocmd FileType c,cpp nnoremap <Leader>r :!./a.out<cr>
+			\ | set colorcolumn=80
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
