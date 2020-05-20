@@ -23,10 +23,10 @@ case "$(printf "$choices" | dmenu_wal -l 6 -i -p "Screenshot:")" in
 		maim | $xclip_cmd
 		;;
 	$choice_area)
-		maim -s "$(filename)"
+		maim -us "$(filename)"
 		;;
 	$choice_area_cb)
-		maim -s | $xclip_cmd
+		maim -us | $xclip_cmd
 		;;
 	$choice_focused)
 		maim -i "$(xdotool getactivewindow)" "$(filename)"
