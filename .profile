@@ -16,4 +16,3 @@ export PATH="$HOME/.local/bin:$PATH"
 export ZDOTDIR="$HOME/.config/zsh"
 
 [[ $(tty) == /dev/tty1 ]] && ! pgrep -x i3 >/dev/null && exec startx
-

@@ -35,4 +35,3 @@ case "$(printf "$choices" | dmenu_wal -l 6 -i -p "Screenshot:")" in
 		maim -i "$(xdotool getactivewindow)" | $xclip_cmd
 		;;
 esac
-

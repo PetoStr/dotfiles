@@ -173,4 +173,3 @@ bindsym $mod+Escape exec --no-startup-id dmenu_system
 
 bindsym $mod+e exec --no-startup-id i3-sensible-terminal -e lf
 bindsym $mod+b exec --no-startup-id firefox
-

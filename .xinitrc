@@ -17,4 +17,3 @@ light -S 75
 start-pulseaudio-x11 &
 blugon &
 exec i3
-

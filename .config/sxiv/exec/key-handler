@@ -13,4 +13,3 @@ do
 		mv "$file" /tmp ;;
         esac
 done
-

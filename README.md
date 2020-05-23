@@ -16,4 +16,3 @@ Just my own collection of dotfiles.
 chmod +x install.zsh
 ./install.zsh
 ```
-

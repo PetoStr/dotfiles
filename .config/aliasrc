@@ -4,4 +4,3 @@ alias ls='ls -hN --group-directories-first --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 alias grep='grep --color=auto'
-

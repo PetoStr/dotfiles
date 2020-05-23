@@ -24,4 +24,3 @@ autoload -U colors && colors
 PROMPT="%B%{$fg[black]%}[%{$fg[green]%}%n@%M %{$fg[red]%}%~%{$fg[black]%}]%{$fg[blue]%}$%{$reset_color%} "
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
