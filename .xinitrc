@@ -2,9 +2,9 @@
 
 wal -R
 
-compton -b --config "$HOME/.config/compton/compton.conf" &
+picom -b
 
-xset r rate 215 40
+xset r rate 200 50
 
 setxkbmap -layout us,sk
 setxkbmap -option 'grp:win_space_toggle'
