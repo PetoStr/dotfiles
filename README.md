@@ -7,7 +7,7 @@ Just my own collection of dotfiles.
 - **Shell**: zsh
 - **Compositor**: picom
 - **Color scheme**: pywal
-- **Editor**: vim
+- **Editor**: nvim
 - **Image viewer**: sxiv
 - **File manager**: lf
 

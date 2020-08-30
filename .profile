@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 export TERMINAL="st"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 export LESSHISTFILE=-
 export LESS=-R
