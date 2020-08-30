@@ -16,8 +16,9 @@ $HOME/.config/fontconfig
 $HOME/.config/compton
 $HOME/.config/zsh
 $HOME/.config/sxiv/exec
+$HOME/.config/nvim
 $HOME/.local/bin
-$HOME/.vim/file_templates
+$HOME/.local/share/file_templates
 $HOME/pics/prntscr
 $HOME/.cache/zsh"
 
