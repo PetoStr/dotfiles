@@ -50,7 +50,7 @@ nnoremap <silent> <cr> :noh<cr><cr>
 " toggle paste mode
 nnoremap <F2> :set paste! nopaste?<cr>
 
-inoremap <Nul> <C-n>
+inoremap <C-space> <C-n>
 
 nnoremap <C-f> :FZF<cr>
 
