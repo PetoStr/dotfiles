@@ -56,3 +56,4 @@ nnoremap <C-f> :FZF<cr>
 
 map <C-p> :bp<cr>
 map <C-n> :bn<cr>
+map <C-b> :b#<cr>
