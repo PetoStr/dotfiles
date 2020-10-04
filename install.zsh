@@ -40,7 +40,7 @@ symlinkdotfiles () {
 				;;
 			*)
 				file="$(echo "$file" | cut -c3-)"
-				if [ -e "$HOME/$file" ]; then
+				if ! [ -L "$HOME/$file" ]; then
 					echo
 					echo "$HOME/$file exists, making a backup"
 					mkdir -vp "$bckdir"
