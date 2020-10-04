@@ -13,7 +13,7 @@ $HOME/.config/polybar
 $HOME/.config/i3
 $HOME/.config/polybar
 $HOME/.config/fontconfig
-$HOME/.config/compton
+$HOME/.config/picom
 $HOME/.config/zsh
 $HOME/.config/sxiv/exec
 $HOME/.config/nvim
@@ -40,7 +40,7 @@ symlinkdotfiles () {
 				;;
 			*)
 				file="$(echo "$file" | cut -c3-)"
-				if ! [ -L "$HOME/$file" ]; then
+				if [ -e "$HOME/$file" ] && ! [ -L "$HOME/$file" ]; then
 					echo
 					echo "$HOME/$file exists, making a backup"
 					mkdir -vp "$bckdir"
