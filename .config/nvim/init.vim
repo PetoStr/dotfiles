@@ -1,6 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'rust-lang/rust.vim'
@@ -27,12 +28,14 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " delete all trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
 
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+
 autocmd FileType c nnoremap <Leader>i ggdG:r ~/.local/share/file_templates/cf_template.c<cr>ggdd5Ga
 autocmd FileType cpp nnoremap <Leader>i ggdG:r ~/.local/share/file_templates/cf_template.cpp<cr>ggdd10Ga
 
-autocmd FileType c nnoremap <Leader>c :!gcc -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
-autocmd FileType cpp nnoremap <Leader>c :!g++ -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
-autocmd FileType c,cpp nnoremap <Leader>r :!./a.out<cr>
+autocmd FileType c nnoremap <Leader>c :terminal gcc -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
+autocmd FileType cpp nnoremap <Leader>c :terminal g++ -Og -g -Wall -Wextra "%" -lm && ./a.out<cr>
+autocmd FileType c,cpp nnoremap <Leader>r :terminal ./a.out<cr>
 autocmd FileType c,cpp set colorcolumn=80
 autocmd FileType rust set colorcolumn=100
 
