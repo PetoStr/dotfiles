@@ -11,6 +11,7 @@ colorscheme wal
 
 let mapleader = ","
 
+set clipboard=unnamedplus
 set mouse=a
 set showcmd
 set number relativenumber
@@ -55,8 +56,8 @@ nnoremap <F2> :set paste! nopaste?<cr>
 
 inoremap <C-space> <C-n>
 
-nnoremap <C-f> :FZF<cr>
+nnoremap <Leader>f :FZF<cr>
 
 map <C-p> :bp<cr>
 map <C-n> :bn<cr>
-map <C-b> :b#<cr>
+map <leader>b :b#<cr>
