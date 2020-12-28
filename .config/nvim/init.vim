@@ -1,5 +1,4 @@
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -7,10 +6,9 @@ Plug 'tpope/vim-surround'
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
-colorscheme wal
-
 let mapleader = ","
 
+set background=dark
 set clipboard=unnamedplus
 set mouse=a
 set showcmd

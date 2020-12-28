@@ -1,19 +1,14 @@
 #!/bin/sh
 
-wal -R
-
 picom -b
 
-xset r rate 200 50
+kb-config
 
-setxkbmap -layout us,sk
-setxkbmap -option 'grp:win_space_toggle'
+light -S 33
 
-setxkbmap -option caps:super
-xcape -e 'Super_L=Escape'
-
-light -S 75
-
-start-pulseaudio-x11 &
+start-pulseaudio-x11 & # big hopes for chromium
+feh-bg & # custom script to set wallpaper with feh
+check-extern & # custom script for monitor setup
 blugon &
-exec i3
+dwmblocks &
+exec dwm

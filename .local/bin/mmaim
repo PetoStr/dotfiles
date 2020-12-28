@@ -1,0 +1,57 @@
+#!/usr/bin/env sh
+
+cmd_all="all"
+cmd_all_cb="all-clipboard"
+cmd_area="area"
+cmd_area_cb="area-clipboard"
+cmd_focused="focused"
+cmd_focused_cb="focused-clipboard"
+
+usage () {
+	cat << EOF
+Usage: $0 [COMMAND]
+
+COMMAND:
+	$cmd_all
+	$cmd_all_cb
+	$cmd_area
+	$cmd_area_cb
+	$cmd_focused
+	$cmd_focused_cb
+EOF
+}
+
+xclip_cmd="xclip -selection clipboard -target image/png"
+filename () {
+	echo "$HOME/pics/prntscr/$(date '+%y-%m-%d_%H-%M-%S').png"
+}
+
+if [ -z $1 ]; then
+	usage
+	exit 0
+fi
+
+case "$1" in
+	$cmd_all)
+		maim "$(filename)"
+		;;
+	$cmd_all_cb)
+		maim | $xclip_cmd
+		;;
+	$cmd_area)
+		maim -us "$(filename)"
+		;;
+	$cmd_area_cb)
+		maim -us | $xclip_cmd
+		;;
+	$cmd_focused)
+		maim -i "$(xdotool getactivewindow)" "$(filename)"
+		;;
+	$cmd_focused_cb)
+		maim -i "$(xdotool getactivewindow)" | $xclip_cmd
+		;;
+	*)
+		usage
+		exit 1
+		;;
+esac

@@ -9,29 +9,23 @@ choice_focused_cb="focused window (clipboard)"
 
 choices="$choice_all\\n$choice_all_cb\\n$choice_area\\n$choice_area_cb\\n$choice_focused\\n$choice_focused_cb"
 
-xclip_cmd="xclip -selection clipboard -target image/png"
-
-filename () {
-	echo "$HOME/pics/prntscr/$(date '+%y-%m-%d_%H-%M-%S').png"
-}
-
-case "$(printf "$choices" | dmenu_wal -l 6 -i -p "Screenshot:")" in
+case "$(printf "$choices" | dmenu -l 6 -i -p "Screenshot:")" in
 	$choice_all)
-		maim "$(filename)"
+		mmaim all
 		;;
 	$choice_all_cb)
-		maim | $xclip_cmd
+		mmaim all-clipboard
 		;;
 	$choice_area)
-		maim -us "$(filename)"
+		mmaim area
 		;;
 	$choice_area_cb)
-		maim -us | $xclip_cmd
+		mmaim area-clipboard
 		;;
 	$choice_focused)
-		maim -i "$(xdotool getactivewindow)" "$(filename)"
+		mmaim focused
 		;;
 	$choice_focused_cb)
-		maim -i "$(xdotool getactivewindow)" | $xclip_cmd
+		mmaim focused-clipboard
 		;;
 esac

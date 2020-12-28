@@ -2,14 +2,12 @@
 Just my own collection of dotfiles.
 
 ## Details
-- **WM**: i3-gaps
+- **WM**: dwm
 - **Terminal**: st
 - **Shell**: zsh
 - **Compositor**: picom
-- **Color scheme**: pywal
 - **Editor**: nvim
 - **Image viewer**: sxiv
-- **File manager**: lf
 
 ## Installation
 ```

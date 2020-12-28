@@ -8,11 +8,7 @@ dotfilesdir="$(pwd)"
 
 scriptname="$(basename "$0")"
 
-dirs="$HOME/.config/i3
-$HOME/.config/polybar
-$HOME/.config/i3
-$HOME/.config/polybar
-$HOME/.config/fontconfig
+dirs="$HOME/.config/fontconfig
 $HOME/.config/picom
 $HOME/.config/zsh
 $HOME/.config/sxiv/exec
