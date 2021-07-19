@@ -11,9 +11,11 @@ choices="$choice_all\\n$choice_all_cb\\n$choice_area\\n$choice_area_cb\\n$choice
 
 case "$(printf "$choices" | dmenu -l 6 -i -p "Screenshot:")" in
 	$choice_all)
+		sleep 0.1
 		mmaim all
 		;;
 	$choice_all_cb)
+		sleep 0.1
 		mmaim all-clipboard
 		;;
 	$choice_area)
