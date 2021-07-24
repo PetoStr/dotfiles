@@ -9,7 +9,7 @@ cmd_focused_cb="focused-clipboard"
 
 usage () {
 	cat << EOF
-Usage: $0 [COMMAND]
+Usage: $0 COMMAND
 
 COMMAND:
 	$cmd_all
