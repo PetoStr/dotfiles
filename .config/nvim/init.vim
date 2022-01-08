@@ -2,6 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 
 " https://sharksforarms.dev/posts/neovim-rust/
 " Collection of common configurations for the Nvim LSP client
@@ -75,7 +76,14 @@ nnoremap <silent> <cr> :noh<cr><cr>
 " toggle paste mode
 nnoremap <F2> :set paste! nopaste?<cr>
 
-nnoremap <Leader>f :FZF<cr>
+" fuzzy finder
+nnoremap <Leader>ff :Files<cr>
+nnoremap <Leader>fr :Rg<cr>
+nnoremap <Leader>ft :Tags<cr>
+nnoremap <Leader>fb :Buffers<cr>
+nnoremap <Leader>fl :BLines<cr>
+nnoremap <Leader>fh :BCommits<cr>
+nnoremap <Leader>fc :Commands<cr>
 
 map <C-p> :bp<cr>
 map <C-n> :bn<cr>
