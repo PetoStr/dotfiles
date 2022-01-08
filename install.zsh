@@ -13,6 +13,8 @@ $HOME/.config/picom
 $HOME/.config/zsh
 $HOME/.config/sxiv/exec
 $HOME/.config/nvim
+$HOME/.config/gtk-3.0
+$HOME/.config/blugon
 $HOME/.local/bin
 $HOME/.local/share/file_templates
 $HOME/pics/prntscr
