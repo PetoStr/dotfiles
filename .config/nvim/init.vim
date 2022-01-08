@@ -21,6 +21,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'mfussenegger/nvim-dap'
 
 Plug 'rust-lang/rust.vim'
+
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
 call plug#end()
 
 let mapleader = ","
@@ -52,6 +55,8 @@ autocmd FileType cpp nnoremap <Leader>c :terminal g++ -Og -g -Wall -Wextra "%" -
 autocmd FileType c,cpp nnoremap <Leader>r :terminal ./a.out<cr>
 autocmd FileType c,cpp set colorcolumn=80
 autocmd FileType rust set colorcolumn=100
+
+autocmd BufWrite *.wiki Vimwiki2HTML
 
 " disable automatic comment insertion
 autocmd BufEnter * set fo-=c fo-=r fo-=o
